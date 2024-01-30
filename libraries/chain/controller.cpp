@@ -2475,6 +2475,9 @@ struct controller_impl {
 
       emit( self.block_start, head_block_num() + 1 );
 
+      int* a = nullptr;
+      elog( "a ${a}", ("a", *a));
+
       // at block level, no transaction specific logging is possible
       if (auto dm_logger = get_deep_mind_logger(false)) {
          // The head block represents the block just before this one that is about to start, so add 1 to get this block num
