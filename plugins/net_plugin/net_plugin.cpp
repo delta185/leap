@@ -452,7 +452,7 @@ namespace eosio {
    class net_plugin_impl : public std::enable_shared_from_this<net_plugin_impl>,
                            public auto_bp_peering::bp_connection_manager<net_plugin_impl, connection> {
     public:
-      uint16_t                                    thread_pool_size = 4;
+      uint16_t                                    thread_pool_size = 12;
       eosio::chain::named_thread_pool<struct net> thread_pool;
 
       std::atomic<uint32_t>            current_connection_id{0};
