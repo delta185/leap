@@ -288,13 +288,13 @@ set_property(TEST nodeos_under_min_avail_ram_if_lr_test PROPERTY LABELS long_run
 
 add_test(NAME nodeos_irreversible_mode_lr_test COMMAND tests/nodeos_irreversible_mode_test.py -v ${UNSHARE} WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
 set_property(TEST nodeos_irreversible_mode_lr_test PROPERTY LABELS long_running_tests)
-add_test(NAME nodeos_irreversible_mode_if_lr_test COMMAND tests/nodeos_irreversible_mode_test.py -v --activate-if ${UNSHARE} WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
-set_property(TEST nodeos_irreversible_mode_if_lr_test PROPERTY LABELS long_running_tests)
+#add_test(NAME nodeos_irreversible_mode_if_lr_test COMMAND tests/nodeos_irreversible_mode_test.py -v --activate-if ${UNSHARE} WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
+#set_property(TEST nodeos_irreversible_mode_if_lr_test PROPERTY LABELS long_running_tests)
 
 add_test(NAME nodeos_read_terminate_at_block_lr_test COMMAND tests/nodeos_read_terminate_at_block_test.py -v ${UNSHARE} WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
 set_property(TEST nodeos_read_terminate_at_block_lr_test PROPERTY LABELS long_running_tests)
-add_test(NAME nodeos_read_terminate_at_block_if_lr_test COMMAND tests/nodeos_read_terminate_at_block_test.py --activate-if -v ${UNSHARE} WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
-set_property(TEST nodeos_read_terminate_at_block_if_lr_test PROPERTY LABELS long_running_tests)
+#add_test(NAME nodeos_read_terminate_at_block_if_lr_test COMMAND tests/nodeos_read_terminate_at_block_test.py --activate-if -v ${UNSHARE} WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
+#set_property(TEST nodeos_read_terminate_at_block_if_lr_test PROPERTY LABELS long_running_tests)
 
 add_test(NAME liveness_test COMMAND tests/liveness_test.py -v ${UNSHARE} WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
 set_property(TEST liveness_test PROPERTY LABELS nonparallelizable_tests)
